@@ -1,0 +1,255 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  /* Updated to orange brand color */
+  --primary: #E9922C;
+  --primary-foreground: #ffffff;
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #FFF7ED;
+  --accent-foreground: #EA580C;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #E9922C;
+  --chart-1: #E9922C;
+  --chart-2: #F97316;  
+  --chart-3: #FB923C;
+  --chart-4: #FDBA74;
+  --chart-5: #FED7AA;
+  --radius: 0.625rem;
+  --sidebar: #FAFAFA;
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #E9922C;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #FFF7ED;
+  --sidebar-accent-foreground: #EA580C;
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: #E9922C;
+  
+  /* Brand specific colors */
+  --brand-orange: #E9922C;
+  --brand-orange-hover: #D97706;
+  --brand-orange-light: #FFF7ED;
+  --brand-orange-dark: #C2410C;
+  --brand-text-dark: #1F2937;
+  --brand-text-light: #6B7280;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #F97316;
+  --primary-foreground: #ffffff;
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: #F97316;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #F97316;
+  --chart-2: #FB923C;
+  --chart-3: #FDBA74;
+  --chart-4: #FED7AA;
+  --chart-5: #E9922C;
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #F97316;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: #F97316;
+  
+  /* Brand specific colors for dark mode */
+  --brand-orange: #F97316;
+  --brand-orange-hover: #EA580C;
+  --brand-orange-light: #431407;
+  --brand-orange-dark: #9A3412;
+  --brand-text-dark: oklch(0.985 0 0);
+  --brand-text-light: oklch(0.708 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Brand colors */
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-hover: var(--brand-orange-hover);
+  --color-brand-orange-light: var(--brand-orange-light);
+  --color-brand-orange-dark: var(--brand-orange-dark);
+  --color-brand-text-dark: var(--brand-text-dark);
+  --color-brand-text-light: var(--brand-text-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      color: var(--brand-text-dark);
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      color: var(--brand-text-dark);
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      color: var(--brand-text-dark);
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      color: var(--brand-text-dark);
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      color: var(--brand-text-light);
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      color: var(--brand-text-dark);
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Brand specific utility classes */
+@layer utilities {
+  .bg-brand-orange {
+    background-color: var(--brand-orange);
+  }
+  
+  .bg-brand-orange-hover:hover {
+    background-color: var(--brand-orange-hover);
+  }
+  
+  .bg-brand-orange-light {
+    background-color: var(--brand-orange-light);
+  }
+  
+  .text-brand-orange {
+    color: var(--brand-orange);
+  }
+  
+  .text-brand-text-dark {
+    color: var(--brand-text-dark);
+  }
+  
+  .text-brand-text-light {
+    color: var(--brand-text-light);
+  }
+  
+  .border-brand-orange {
+    border-color: var(--brand-orange);
+  }
+  
+  .ring-brand-orange {
+    --tw-ring-color: var(--brand-orange);
+  }
+}
